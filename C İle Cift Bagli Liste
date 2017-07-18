@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct yapi{//Bu Yapi Cift Bagli Liste ›cin Kullanilacak..
+struct yapi{//Bu Yapi Cift Bagli Liste √ùcin Kullanilacak..
 	int data;
 	struct yapi *next;
-	struct yapi *prev;//Yapinin Oncesini Tutan Yapi.›smi Previous'dan gelir.
+	struct yapi *prev;//Yapinin Oncesini Tutan Yapi.√ùsmi Previous'dan gelir.
 };
 typedef struct yapi node;
 node *Olustur_CiftB(int data)
