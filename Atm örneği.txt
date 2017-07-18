@@ -1,0 +1,33 @@
+#include<stdio.h>
+/*
+Bir memur, ATM makinasýndan para çekmek istemektedir. Makinede sadece 10, 20, 50 ve 100 TL' lik
+banknotlar kalmýþtýr. Büyük deðerli banknotlarýn sayýsý maksimum olacak þekilde, çekilecek paranýn kaç tane
+100, 50, 20 ve 10 liralýk banknottan oluþacaðýný ekranda yazan C programýný yazýnýz. */
+int main()
+{
+	int para,yuzluk,elli,yirmi,on;
+	
+	printf("Cekmek istediginiz para miktarini giriniz:");
+	scanf("%d",&para);
+	
+	if(para%10!=0)
+	{
+		printf("En az 10 tl cekebilirsiniz :)");
+	}
+	else
+	{
+		yuzluk=para/100; para-=yuzluk*100;
+		elli=para/50; 	 para-=elli*50;
+		yirmi=para/20;   para-=yirmi*20;
+		on=para/10;  
+		
+		if(yuzluk>0)
+			printf("%d adet yuzluk\n",yuzluk);
+		if(elli>0) 
+			printf("%d adet elli\n",elli);
+		if(yirmi>0)
+			printf("%d adet yirmi\n",yirmi);
+		if(on>0)
+			printf("%d adet on",on);  
+	}
+}

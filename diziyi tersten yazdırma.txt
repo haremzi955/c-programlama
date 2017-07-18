@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+
+int main()
+{
+	int dizi[]={1,4,9,7,6};
+	int i,j;
+	for(i=0;dizi[i]!='\0';i++)
+	{
+		
+	}
+	for(j=i-1;j>=0;j--)
+	{
+		printf("%d\n",dizi[j]);
+	}
+}

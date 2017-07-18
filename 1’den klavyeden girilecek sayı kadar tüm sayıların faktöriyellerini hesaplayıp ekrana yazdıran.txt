@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+	int i,fak=1,sayi;
+	
+	printf("Sayi Gir:\n");
+	scanf("%d",&sayi);
+	
+	for(i=1;i<=sayi;i++)
+	{
+		fak*=i;
+		printf("%d\n",fak);
+	}
+}

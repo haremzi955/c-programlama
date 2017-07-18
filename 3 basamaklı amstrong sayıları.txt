@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	int i,bir,on,yuz,sum;
+	
+	for(i=100;i<=999;i++)
+	{
+		yuz=i/100;
+		on=(i%100)/10;
+		bir=i%10;
+		sum=yuz*yuz*yuz+on*on*on+bir*bir*bir;
+		if(sum==i)
+		{
+			printf("%d\n",sum);
+		}
+	}
+	
+	
+	
+}

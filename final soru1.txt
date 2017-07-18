@@ -1,0 +1,26 @@
+Klavyeden girilen her kelimenin 5 harften uzun olmayabileceði durumunu göz ardý etmeden 10 adet 5 harften oluþan kelimeyi klavyeden okuyup hafýzada tutan bir C programý yazýnýz.
+
+#include<stdio.h>
+#include<string.h>
+
+int main() 
+{ 
+    char a[3][5];
+    
+    int i;
+    
+    for(i=0;i<3;i++)
+    {
+		
+		printf("Kelime Gir:");
+		scanf("%s",a[i]);
+		int x=strlen(a[i]);
+		if(x>5)
+		{
+			
+			printf("girdiginiz kelime 5 harfden fazla:");
+			break;
+		}
+	}
+	
+}

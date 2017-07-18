@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+	char a[50]="ddgffg";
+	char ab[40]="dsf";
+	char gecici[100];
+	char bos=' ';
+	int i=0,len=0;
+	for(i=0;a[i]!=NULL;i++)
+	{
+		len++;
+	}
+	for(i=0;i<len;i++)
+	{
+		gecici[i]=a[i];
+	}
+	for(i=0;i<1;i++)
+	{
+		gecici[len]=bos;
+		len++;
+	}
+	for(i=0;ab[i]!=NULL;i++)
+	{
+		gecici[len]=ab[i];
+		len++;
+	}
+	printf("%s",gecici);
+
+}

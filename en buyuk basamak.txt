@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+	int sayi,i,max=0,basamak;
+	
+	printf("Sayi Gir:");scanf("%d",&sayi);
+	
+	for(i=1;i<sayi;i++)
+	{
+		basamak=sayi%10;
+		if(basamak>max)
+			max=basamak;
+		sayi=sayi/10;
+	}
+	printf("max=%d",max);
+}

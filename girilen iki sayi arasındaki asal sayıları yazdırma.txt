@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+
+int main()
+{
+	int sayi1,sayi2,i,j;
+	
+	printf("iki sayi giriniz:");
+	scanf("%d%d",&sayi1,&sayi2);
+	
+	for(i=sayi1;i<sayi2;i++)
+	{
+		for(j=2;j<i;j++)
+		{
+			if(i%j==0)
+			{
+				break;
+			}
+			else
+			{
+				printf("%d ",i);
+				break;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int main()
+{
+	/*arkadas sayi yazdýrma*/
+	
+	int s1,s2;
+	int i,j,Ts1=0,Ts2=0; //T:toplam 
+	printf("iki Sayi Giriniz");
+	scanf("%d%d",&s1,&s2);
+	
+	for(i=1;i<s1;i++)
+	{
+		if(s1%i==0)
+		{
+			Ts1+=i;
+		}
+	}
+	for(j=0;j<s2;j++)
+	{
+		if(s2%j==0)
+		{
+			Ts2+=i;
+		}
+	}
+	if(Ts1==s2 && Ts2==s1)
+	{
+		printf("%d ve %d arkadas sayidir",s1,s2);
+	}
+	else
+	{
+		printf("Arkadas Sayi Degildir");
+	}
+}
