@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct yapi{//Bu Yapiyi Tek Bagli Dogrusal Ve Dairesel Liste ›cin Kullandik..
+struct yapi{//Bu Yapiyi Tek Bagli Dogrusal Ve Dairesel Liste i√ßin Kullandik..
 	int data;
 	struct yapi *next;
 };
