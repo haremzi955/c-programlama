@@ -37,6 +37,59 @@ node *Insert(node *root,int data)
 	}
 	return root;
 }
+//Binary Tree'de Silme islemi
+
+node *sil(node *root,int del)
+{
+	node *p ,*q;
+	if(root == NULL) //Agacta Hic Cocuk Olmama Durumu.
+	{
+		return 0;
+	}
+	if(root->data == del)//Aradigimiz Rootun Bulundu.
+	{
+		if(root->left && root->right)//Bulunan Root'da Hic Cocuk olmama durumu.
+		{
+			return NULL;
+		}
+		else if(root->left==NULL)//Sag Cocugu Bulunan Durum.
+		{
+			p = root->right;
+			free(root);
+			return p;
+		}
+		else if(root->right==NULL)//Sol Cocugu Bulunan Durum.
+		{
+			p = root->left;
+			free(root);
+			return p;
+		}
+		else
+		{
+			p = q = root->right;//Sag Ve sol Cocugu Olan Durum.
+			while(p->left!=NULL)
+				p = p->left;
+				
+			p->left = root->left;
+			free(root);
+			return q;
+			
+		}
+		
+		
+	}
+	else if(root->data<del)//Silmek istedigimiz elemanin bulunmdiginda calisacak durum.
+	{
+		root->right = sil(root->right,del);
+	}
+	else
+		root->left = sil(root->left,del);
+	
+	return root;
+	
+		
+}
+
 // Binary Tree icin uygulanan dolasimlar.
 void Preorder(node *root)
 {
